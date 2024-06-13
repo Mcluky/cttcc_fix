@@ -54,7 +54,7 @@ export const Result = ({ result }) => {
                     <div className="border-t border-gray-200 py-5 sm:p-0 mt-2">
                         <dl className="sm:divide-y sm:divide-gray-200">
                             <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                <dt className="text-sm font-medium text-gray-500">{result.output.displayName} {result.output.unit && <>[{result.output.unit}]</>}</dt>
+                                <dt className="text-sm font-medium text-gray-500">{result.output.displayName} {result.output.displayName === 'ARR' ? 'Perhaps need to -1 (inlude 0 in counting for duration based calculation)': ''} {result.output.unit && <>[{result.output.unit}]</>}</dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{result.value} {result.output.unit && <>{result.output.unit}</>}</dd>
                             </div>
                         </dl>
